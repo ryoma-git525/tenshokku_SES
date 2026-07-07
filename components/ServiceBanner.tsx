@@ -2,16 +2,26 @@ import { SERVICES } from "@/lib/constants";
 
 export function ServiceBanner() {
   return (
-    <section className="mx-auto max-w-6xl pb-32 pt-28 sm:pt-40">
-      <div className="scroll-reveal mx-auto mb-14 max-w-2xl text-left sm:mb-16">
-        <p className="text-lg font-medium leading-9 text-white/72">
-          この診断で変わるのは、仕事ではありません。
-          <br />
-          「自分にはこんな選択肢もあるんだ。」そう思える求人を、少しだけのぞいてみませんか。
-        </p>
-      </div>
+    <section className="relative left-1/2 right-1/2 -mx-[50vw] mt-24 w-screen overflow-hidden bg-black px-6 pb-32 pt-24 sm:mt-32 sm:px-10 sm:pb-40 sm:pt-32">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.18] [background-image:repeating-radial-gradient(ellipse_at_58%_38%,transparent_0,transparent_18px,rgba(255,255,255,0.55)_19px,transparent_20px)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_52%_0%,rgba(255,255,255,0.16),transparent_42rem)]"
+      />
 
-      <div className="mx-auto grid max-w-6xl gap-5 lg:grid-cols-[1.18fr_0.82fr]">
+      <div className="relative mx-auto max-w-[112rem]">
+        <div className="scroll-reveal mb-16 max-w-[98rem] text-left sm:mb-20">
+          <p className="text-4xl font-semibold leading-[1.22] tracking-normal text-white sm:text-6xl lg:text-7xl">
+            この診断で変わるのは、仕事ではありません。
+            <br />
+            「自分にはこんな選択肢もあるんだ。」そう思える求人を、少しだけのぞいてみませんか。
+          </p>
+        </div>
+
+      <div className="grid gap-x-8 gap-y-12 lg:grid-cols-3">
         {SERVICES.map((service) => (
           <a
             key={service.title}
@@ -19,47 +29,27 @@ export function ServiceBanner() {
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
             aria-label={`${service.title}を別タブで開く`}
-            className={[
-              "group scroll-reveal relative block overflow-hidden rounded-[2rem] border border-white/14 bg-white/[0.075] shadow-[0_26px_90px_rgba(0,0,0,0.24)] backdrop-blur-2xl transition duration-500 hover:-translate-y-1.5 hover:border-white/24 hover:bg-white/[0.105] hover:shadow-[0_42px_130px_rgba(0,0,0,0.32)] active:translate-y-0 active:scale-[0.98]",
-              service.featured ? "p-3.5 lg:row-span-2" : "p-3"
-            ].join(" ")}
+            className="group scroll-reveal block transition duration-500 hover:-translate-y-2 active:translate-y-0 active:scale-[0.98]"
           >
-            <div
-              aria-hidden="true"
-              className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-cyan-100/10 blur-3xl transition duration-500 group-hover:bg-cyan-100/16"
-            />
-
-            <div className="relative rounded-[1.55rem] border border-white/10 bg-white/[0.045] p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-              <div
-                className={[
-                  "flex items-center justify-center overflow-hidden rounded-[1.25rem] bg-[linear-gradient(145deg,#fffdfa_0%,#f7fafc_58%,#eef6f8_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_24px_70px_rgba(0,0,0,0.20)]",
-                  service.featured ? "aspect-[1.62/1] lg:aspect-[1.42/1]" : "aspect-[2.25/1]"
-                ].join(" ")}
-              >
+            <div className="relative aspect-[16/9] overflow-hidden rounded-[1.65rem] bg-[linear-gradient(145deg,#ffffff_0%,#f8fafc_58%,#eef3f6_100%)] shadow-[0_34px_110px_rgba(0,0,0,0.38)] ring-1 ring-white/12 transition duration-500 group-hover:shadow-[0_44px_130px_rgba(0,0,0,0.52)] group-hover:ring-white/22">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.95),transparent_34%),linear-gradient(180deg,transparent,rgba(10,22,30,0.05))]" />
+              <div className="relative flex h-full items-center justify-center">
                 <img
                   src={service.image}
                   alt={service.title}
                   width={service.imageWidth}
                   height={service.imageHeight}
-                  className={[
-                    "h-auto transition duration-700 group-hover:scale-[1.04]",
-                    service.featured ? "w-[58%] max-w-[320px]" : "w-[52%] max-w-[220px]"
-                  ].join(" ")}
+                  className="h-auto w-[54%] max-w-[300px] transition duration-700 group-hover:scale-[1.045]"
                 />
               </div>
             </div>
             <img src={service.trackingImage} width="1" height="1" alt="" className="sr-only" />
-            <div className={service.featured ? "px-4 pb-5 pt-6 lg:pt-8" : "px-3 pb-4 pt-5"}>
-              <h3 className={service.featured ? "text-2xl font-semibold tracking-normal text-white sm:text-3xl" : "text-lg font-semibold tracking-normal text-white"}>
-                {service.title}
-              </h3>
+            <div className="pt-5 sm:pt-6">
+              <h3 className="text-xl font-semibold tracking-normal text-white sm:text-2xl">{service.title}</h3>
             </div>
           </a>
         ))}
+      </div>
       </div>
     </section>
   );
