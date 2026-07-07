@@ -90,27 +90,21 @@ export const LOADING_MESSAGES = [
 export const SERVICES: Service[] = [
   {
     title: "エンジニア転職",
-    href: "https://px.a8.net/svt/ejp?a8mat=4B65SI+2MNYQI+5P1E+5Z6WX",
-    image: "https://www29.a8.net/svt/bgt?aid=260627922159&wid=002&eno=01&mid=s00000026573001004000&mc=1",
-    imageWidth: 100,
-    imageHeight: 60,
-    trackingImage: "https://www19.a8.net/0.gif?a8mat=4B65SI+2MNYQI+5P1E+5Z6WX",
+    href: "https://px.a8.net/svt/ejp?a8mat=4B65SI+2MNYQI+5P1E+5ZEMP",
+    image: "https://www20.a8.net/svt/bgt?aid=260627922159&wid=002&eno=01&mid=s00000026573001005000&mc=1",
+    imageWidth: 320,
+    imageHeight: 100,
+    trackingImage: "https://www13.a8.net/0.gif?a8mat=4B65SI+2MNYQI+5P1E+5ZEMP",
     featured: true
   },
   {
     title: "他の転職先",
     href: "https://px.a8.net/svt/ejp?a8mat=4B66KG+5DHX5M+5BJK+5ZMCH",
-    image: "https://www29.a8.net/svt/bgt?aid=260628928325&wid=002&eno=01&mid=s00000024824001006000&mc=1",
-    imageWidth: 100,
-    imageHeight: 60,
     trackingImage: "https://www19.a8.net/0.gif?a8mat=4B66KG+5DHX5M+5BJK+5ZMCH"
   },
   {
     title: "副業",
     href: "https://px.a8.net/svt/ejp?a8mat=4B65SI+3I7XSQ+4V0U+ZRIB5",
-    image: "https://www24.a8.net/svt/bgt?aid=260627922212&wid=002&eno=01&mid=s00000022683006007000&mc=1",
-    imageWidth: 120,
-    imageHeight: 60,
     trackingImage: "https://www12.a8.net/0.gif?a8mat=4B65SI+3I7XSQ+4V0U+ZRIB5"
   }
 ];

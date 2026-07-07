@@ -19,22 +19,32 @@ export function ServiceBanner() {
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
             aria-label={`${service.title}を別タブで開く`}
-            className="group scroll-reveal block rounded-[1.6rem] border border-white/12 bg-white/[0.08] p-2.5 shadow-[0_20px_70px_rgba(0,0,0,0.18)] backdrop-blur-xl transition duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:bg-white/[0.11] hover:shadow-[0_34px_100px_rgba(0,0,0,0.26)] active:translate-y-0 active:scale-[0.98]"
+            className="group scroll-reveal block overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.055] shadow-[0_20px_70px_rgba(0,0,0,0.16)] backdrop-blur-xl transition duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:bg-white/[0.085] hover:shadow-[0_34px_100px_rgba(0,0,0,0.24)] active:translate-y-0 active:scale-[0.98]"
           >
-            <div className="rounded-[1.25rem] bg-white/[0.06] p-1.5">
-              <div className="flex aspect-[16/10] items-center justify-center overflow-hidden rounded-[1rem] bg-white">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  width={service.imageWidth}
-                  height={service.imageHeight}
-                  className="h-auto w-[68%] max-w-[180px] transition duration-700 group-hover:scale-[1.035]"
-                />
+            <div className="p-2.5">
+              <div className="flex aspect-[16/9] items-center justify-center overflow-hidden rounded-[1.05rem] bg-[linear-gradient(145deg,#fffdfa_0%,#f7fafc_58%,#eef5f7_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.85)]">
+                {service.image ? (
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    width={service.imageWidth}
+                    height={service.imageHeight}
+                    className="h-auto w-[76%] max-w-[320px] transition duration-700 group-hover:scale-[1.035]"
+                  />
+                ) : (
+                  <span className="px-8 text-center text-2xl font-semibold tracking-normal text-slate-950 sm:text-3xl">
+                    {service.title}
+                  </span>
+                )}
               </div>
             </div>
             <img src={service.trackingImage} width="1" height="1" alt="" className="sr-only" />
-            <div className="px-3 py-4">
-              <h3 className="text-base font-semibold tracking-normal text-white sm:text-lg">{service.title}</h3>
+            <div className="px-5 pb-5 pt-3">
+              {service.image ? (
+                <h3 className="text-base font-semibold tracking-normal text-white sm:text-lg">{service.title}</h3>
+              ) : (
+                <span className="block h-7" aria-hidden="true" />
+              )}
             </div>
           </a>
         ))}

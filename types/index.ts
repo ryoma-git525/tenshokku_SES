@@ -36,9 +36,9 @@ export type SimulationResult = {
 export type Service = {
   title: string;
   href: string;
-  image: string;
-  imageWidth: number;
-  imageHeight: number;
+  image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   trackingImage: string;
   featured?: boolean;
 };
