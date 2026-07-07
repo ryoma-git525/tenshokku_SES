@@ -1,0 +1,31 @@
+# dependencies
+node_modules
+
+# next.js
+.next
+out
+
+# production
+build
+
+# local export artifacts
+*.zip
+outputs
+work
+tenshoku_ses
+
+# local env files
+.env
+.env*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# system
+.DS_Store
+
+# typescript
+*.tsbuildinfo
