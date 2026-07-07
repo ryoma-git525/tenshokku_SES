@@ -79,7 +79,7 @@ export function ResultCard({ result, onReset }: ResultCardProps) {
             <p className="text-lg font-medium leading-9 text-white/70">
               「本当にそんな求人あるの？」
               <br className="hidden sm:block" />
-              そう思ったら、まずはあなたと近い経験の人が選んでいる求人を見てみませんか。
+              まずはあなたと近い経験の人が選んでいる求人を見てみませんか。
             </p>
           </div>
 
